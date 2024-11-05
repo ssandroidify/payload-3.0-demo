@@ -21,6 +21,7 @@
     "node": "^18.20.2 || >=20.9.0"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.9.1",
     "@payloadcms/db-mongodb": "3.0.0-beta.108",
     "@payloadcms/db-postgres": "3.0.0-beta.108",
     "@payloadcms/next": "3.0.0-beta.108",
@@ -33,6 +34,9 @@
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-select": "^2.0.0",
     "@radix-ui/react-slot": "^1.0.2",
+    "@react-email/components": "^0.0.17",
+    "@tanstack/react-query": "4.36.1",
+    "@tanstack/react-table": "^8.17.3",
     "babel-plugin-react-compiler": "0.0.0-experimental-48eb8f4-20240822",
     "class-variance-authority": "^0.7.0",
     "cross-env": "^7.0.3",
@@ -42,6 +46,7 @@
     "payload": "3.0.0-beta.108",
     "react": "19.0.0-rc-5dcb0097-20240918",
     "react-dom": "19.0.0-rc-5dcb0097-20240918",
+    "react-hook-form": "^7.53.1",
     "sonner": "^1.7.0",
     "swiper": "^11.1.14",
     "tailwind-merge": "^2.5.4",
