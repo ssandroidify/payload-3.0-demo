@@ -1,19 +1,37 @@
-import React from 'react'
-import './globals.scss'
+import Footer from '@/components/Footer'
+import Navbar from '@/components/Navbar'
+import Providers from '@/components/Providers'
+import { cn, constructMetadata } from '@/lib/utils'
+import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { Toaster } from 'sonner'
+import './globals.scss'
 
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-})
+const inter = Inter({ subsets: ['latin'] })
 
-/* Our app sits here to not cause any conflicts with payload's root layout  */
-const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const metadata = constructMetadata()
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
   return (
-    <html className={inter.className}>
-      <body>{children}</body>
+    <html lang="en">
+      <body
+        suppressHydrationWarning={true}
+        className={cn('relative h-full font-sans antialiased', inter.className)}
+      >
+        <main className="relative flex flex-col min-h-screen">
+          {/* <Providers> */}
+          <Navbar />
+          <div className="flex-grow flex-1">{children}</div>
+          <Footer />
+          {/* </Providers> */}
+        </main>
+
+        <Toaster position="top-center" richColors />
+      </body>
     </html>
   )
 }
-
-export default Layout
