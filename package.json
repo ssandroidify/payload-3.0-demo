@@ -43,6 +43,7 @@
     "react": "19.0.0-rc-5dcb0097-20240918",
     "react-dom": "19.0.0-rc-5dcb0097-20240918",
     "sonner": "^1.7.0",
+    "swiper": "^11.1.14",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.23.8"
